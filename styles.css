@@ -1,0 +1,179 @@
+/*style for final project*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: verdana, helvetica, arial, sans-serif;
+    font-size: 100%;
+}
+
+.home nav#primary > ul > li:nth-child(1) a,
+.about nav#primary > ul > li:nth-child(2) a,
+.cities nav#primary > ul > li:nth-child(3) a,
+.food nav#primary > ul > li:nth-child(4) a,
+.contact nav#primary > ul > li:nth-child(5) a {
+    color: red;
+    background: white;
+}
+
+#wrapper {
+    width: 940px;
+    margin: 200px auto 50px auto;
+}
+
+img {
+    margin-bottom: 5px;
+    max-width: 100%;
+    display: block;
+}
+
+header {
+    line-height: 100px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+    
+    z-index: 1;
+}
+
+.logo {
+}
+
+.logo a {
+    text-decoration: none;
+    color: black;
+}
+
+#container {
+    width: 940px;
+/*    height: 85px;*/
+    margin: 0 auto;
+}
+
+nav#primary {
+    height: 50px;
+    line-height: 50px;
+    -webkit-box-shadow: 0 10px 6px -6px #eee;
+	   -moz-box-shadow: 0 10px 6px -6px #eee;
+	        box-shadow: 0 10px 13px -6px #eee;
+}
+
+nav#primary ul {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+nav#primary li {
+    list-style-type: none;
+    float: left;
+    width: 20%;
+    text-align: center;
+    position: relative;
+    font-size: .93em;
+}
+
+nav#primary a {
+    display: block;
+    text-decoration: none;
+    color: grey;
+    background: white;
+}
+
+nav#primary a:hover {
+    color: red;
+}
+
+.drop-down {
+    display: none;
+}
+
+nav#primary li:hover .drop-down {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+}
+
+nav#primary li:hover .drop-down li {
+    float: none;
+    width: auto;
+}
+
+nav#primary li:hover .drop-down a:hover {
+    color: white;
+    background: black;
+}
+
+
+main {
+    width: 580px;
+    float: left;
+    margin-top: 20px;
+}
+
+#mainhome {
+    width: 940px;   
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.center {
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+aside {
+    width: 280px;
+    float: right;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 180px;
+    font-size: .875em;
+}
+
+
+footer {
+    height: 50px;
+    line-height: 50px;
+    font-size: .875em;
+    border-top: 1px #ccc solid;
+    clear: both;
+/*
+    background: grey;
+    margin-top: 15px;
+*/
+}
+
+footer li {
+    list-style-type: none;
+    float: left;
+    margin-right: 50px;
+    color: grey;
+}
+
+footer a {
+    color: rgb(0, 176, 127);
+}
+
+/*---------Typhography---------*/
+
+h2 {
+    margin-bottom: 16px;
+}
+
+p {
+    margin-bottom: 25px;
+}
