@@ -51,17 +51,20 @@
 <p class="m-t-1">5. Click on ssh. This will open up a terminal window.</p>
 <img src="images/6.png" alt="Click on ssh">
     
-<p class="m-t-2">6. First we need to install <a href="https://cloud.google.com/nodejs/docs/setup">Node Version Manager (NVM)</a>. For details on installing NVM, see the <a href="https://github.com/creationix/nvm#installation">installation instructions</a>.</p>
-<p>To install or update nvm, you should run the <a href="https://github.com/nvm-sh/nvm/blob/v0.35.1/install.sh">install script</a>. To do that, you may either download and run the script manually, or use the following cURL or Wget command:</p>
+<p class="m-t-2">6. First we need to install  Node Version Manager (NVM). </p>
 <span class="console">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash</span>
-<span class="console">wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash</span>
     
-<h4 class="m-t-2">Adding Node.js</h4>
-<p class="m-t-1">Installing the latest version of Node.js run the following:</p>
+<p class="m-t-1">7. Installing the latest version of Node.js run the following:</p>
 <span class="console">nvm install stable</span>
 <p class="m-t-1">To verify that NVM has been installed run the following:</p>
 <span class="console">nvm  --version</span>
-<p class="m-t-1">If you get nvm command not found you will need to restart your server.</p>
+<p class="m-t-1">If you get nvm command not found you will need to restart your server. Once your server has restarted, use the command <strong>nvm install stable</strong> to install the latest version of Node.js. </p>
+    
+<h4 class="m-t-2">Adding Node.js</h4> 
+<p class="m-t-1">8. Install Node by running the following command: </p>
+<span class="console">nvm install node</span>
+    
+<h4 class="m-t-2">Install Vue.js</h4>     
     
 <h4 class="m-t-2">Create a Mongo.DB account</h4>
 <p class="m-t-1">1. Navigate to <a href="https://cloud.mongodb.com/user#/atlas/login">MongoDB Cloud Platform</a> and create a new account.
@@ -112,6 +115,21 @@
     
 <p class="m-t-1">2. In the Create a MongoDB User step of the dialog, enter a Username and Password for your MongoDB user. You’ll use this username and password combination to access data on your cluster.</p>
 <img style="width: 700px;" src="images/18.png" alt="Create MongoDB User">
+    
+<p class="m-t-1">3. Click Create MongoDB User.</p>
+<img style="width: 700px;" src="images/19.png" alt="Create MongoDB User"> 
+    
+<h4 class="m-t-2">Clone the Repo</h4>
+<p>1. Next we installed git:</p>
+<span class="console">sudo apt install git</span>    
+<p>2. Next we associated our git user.name with this installation: </p> 
+<span class="console">git config --global user.name "John Doe"</span>
+<p>3. Next we associated our git user.email with this installation: </p> 
+<span class="console">git config --global user.email "johndoe@example.com"</span>
+<p>4. As a sample, we used git clone to copy/paste a repo in our web space: </p> 
+<span class="console">sudo git clone (Gene’s repo link goes here)</span>
+<p>5. We were able to view the web page here: <em>http://34.82.73.108/todo-list/</em></p>
+
 
 </ul>   
     
