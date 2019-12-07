@@ -27,7 +27,8 @@
 </header>    
     
 <div id="wrapper">
-<h1 style="text-align: center;">Hello, World</h1>    
+<button onclick="myFunction()">Click!</button>
+<h1 style="text-align: center;" id="myH1">Hello, World</h1>    
     
 
     
@@ -40,7 +41,18 @@
     </ul>
 </footer>
 
-</div>     
+</div> 
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myH1");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
     
 </body>
 </html>    
