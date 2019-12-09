@@ -131,6 +131,10 @@ main {
     padding-left: 40px;
 }
 
+.m-t-0 {
+    margin-top: 20px;
+}
+
 .m-t-1 {
     margin-top: 40px;
 }
@@ -161,6 +165,14 @@ main {
 }
 
 span {
+    display: block;
+    margin-bottom: 16px;
+}
+
+button {
+    width: 25%;
+    font-size: 1.3em;
+    margin: 0 auto;
     display: block;
     margin-bottom: 16px;
 }
