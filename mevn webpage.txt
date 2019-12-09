@@ -1,0 +1,72 @@
+MEVN Stack intro:
+As it is with so many aspects of life, we face decisions every day. The application development industry is no exception to this and with so many options now available to build our next project around, how do we make the right choice for our needs? We need to be sure that the stack or framework that we commit to is going to allow flexibility and scalability as the application grows while also maintaining ease of developement and the ability to get up and running as fast and efficiently as possible.
+
+One solution to this is the MEVN (MongoDB, Express.js, Vue.js, and Node.js) stack. This is by far one of the easiest and fastest development stacks to get into and understand, largely due to the fact that it is entirely driven by javascript! Yes, if you have a working knowledge of html css and javascript, then the MEVN stack will be a phenomenal next step in your development career and a logical choice for your application needs.
+
+
+MongoDB:
+MongoDB is a general purpose, document-based, distributed database built for modern application developers. This is the first step in the javascript based MEVN stack as data in the MongoDB environment is stored in JSON-like (Javascript Object Notation) documents. With an easy to grasp and utilize structure, along with cloud database resources available through MongoDB Atlas, you can start building your application faster which means getting to deployment that much sooner. From small home business uses to large commercial and enterpise application needs, MongoDB has the tools and features needed to store and manage your data.
+
+
+Express.js:
+Express.js is a web-application framework for Node.js that handles the cookeies, request body parsing, route handling and socket listening to handle incoming requests to the node.js server. Express is highly flexible, allowing you to choose how to deal with tasks and which components you would like to use to do so. Express allows you to decide how you want to structure your application and is very minimal to implement as well as being easy to learn.
+
+Some examples of when to use Express.js include:
+1. Applications that communicate with third party resources.
+2. Applications for tracking website visitors and data.
+3. Real-Time applications that are updated in real time.
+
+Vue.js:
+Vue.js is a feature rich framework used for building user interfaces and is also suprisingly lightweight and easy to understand. Being based in Javascript allows Vue to integrate easily into existing applications while maintaining flexibility that allows you to write templates in HTML, Javascript, or even JSX. Vue gives you the freedom to write your application in the way that suits your needs, with a robust companion library that is officially supported and kept up-to-date with the core Vue library. This means you will have no shortage of resources to make your app look and feel exactly how you want it to.
+
+Node.js:
+Node.js is a highly versatile, run-time environmeent tool that can allow you to build platform-independant web apps. It’s a light, scalable, and cross-platform way to execute code, and uses an event-driven I/O model which makes it extremely efficient and makes scalable network applications possible. Uses of Node.js are not limited to web applications but also include microcontrollers, REST APIs, static file servers, OS wrappers, robots, and even drone programming.
+
+The most important advantages of Node include:
+1. It makes building real-time apps (eg. chat or gaming) lightning fast.
+2. It makes coding in JavaScript for both the client and server side possible.
+3. It increases the efficiency of the development process as it fills the gap between frontend and backend developers.
+4. NPM (Node Package Manager) gives developers multiple tools and modules to use, thus further boosting their productivity.
+5. Code executes faster than in any other language,
+
+
+Citations:
+
+MongoDB:
+The database for modern applications
+https://www.mongodb.com/
+
+When to Use (and Not to Use) MongoDB
+by Prashanth Jayaram
+Nov. 30, 16
+https://dzone.com/articles/why-mongodb
+
+Express.js:
+Express.js Mobile App Development
+by: Tymets Volodymyr
+Jun 08, 2017
+https://apiko.com/blog/express-mobile-app-development/
+
+Express.js
+https://www.tutorialsteacher.com/nodejs/expressjs
+
+Vue.js:
+What is Vue.js and What are its Advantages
+October 25th 2017
+https://hackernoon.com/what-is-vue-js-and-what-are-its-advantages-4071b7c7993d
+
+Advantages of Using Vue.JS For Your Web Applications
+by: BrainMobi
+Jul 19, 2018
+https://medium.com/@brainmobi/advantages-of-using-vue-js-for-your-web-applications-7e460cadfffc
+
+Node.js:
+What is Node.js Used for?
+by: Zakhar Yung
+11 September, 2018
+https://railsware.com/blog/what-is-node-js-used-for/
+
+6 Main Reasons Why Node.js Has Become a Standard for Enterprise-Level Organizations
+by: Karolina Gawron
+October 11, 2018
+https://www.monterail.com/blog/nodejs-development-enterprises
