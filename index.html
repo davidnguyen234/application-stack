@@ -19,7 +19,8 @@
     
 <nav id="primary">
     <ul>
-    <li><a href="index.html">MEVN/App Tutorial</a></li>
+    <li><a href="index.html">MEVN Tutorial</a></li>
+    <li><a href="webapp.html">Web App Tutorial</a></li>
     <li><a href="https://github.com/davidnguyen234/application-stack">GitHub Repo</a></li>
     <li><a href="contactus.html">Contact Us</a></li>
     </ul>
@@ -28,7 +29,33 @@
     
 <div id="wrapper">
     
-<h2>Spinning up a MEVN stack on GCP (Google Cloud platform)</h2>
+<h2>MEVN Stack</h2>    
+<p>As it is with so many aspects of life, we face decisions every day. The application development industry is no exception to this and with so many options now available to build our next project around, how do we make the right choice for our needs? We need to be sure that the stack or framework that we commit to is going to allow flexibility and scalability as the application grows while also maintaining ease of developement and the ability to get up and running as fast and efficiently as possible.</p>
+
+<p>One solution to this is the MEVN (MongoDB, Express.js, Vue.js, and Node.js) stack. This is by far one of the easiest and fastest development stacks to get into and understand, largely due to the fact that it is entirely driven by javascript! Yes, if you have a working knowledge of html css and javascript, then the MEVN stack will be a phenomenal next step in your development career and a logical choice for your application needs.</p>
+    
+<h3>MongoDB</h3>
+<p>MongoDB is a general purpose, document-based, distributed database built for modern application developers. This is the first step in the javascript based MEVN stack as data in the MongoDB environment is stored in JSON-like (Javascript Object Notation) documents. With an easy to grasp and utilize structure, along with cloud database resources available through MongoDB Atlas, you can start building your application faster which means getting to deployment that much sooner. From small home business uses to large commercial and enterpise application needs, MongoDB has the tools and features needed to store and manage your data.</p>
+    
+<h3>Express.js</h3>
+<p>Express.js is a web-application framework for Node.js that handles the cookeies, request body parsing, route handling and socket listening to handle incoming requests to the node.js server. Express is highly flexible, allowing you to choose how to deal with tasks and which components you would like to use to do so. Express allows you to decide how you want to structure your application and is very minimal to implement as well as being easy to learn.</p>
+<p style="margin-bottom: 8px;">Some examples of when to use Express.js include:</p>
+<p class="l-indent" style="margin: 0;">1. Applications that communicate with third party resources.</p>
+<p class="l-indent" style="margin: 0;">2. Applications for tracking website visitors and data.</p>
+<p class="l-indent" style="margin-top: 0;">3. Real-Time applications that are updated in real time.</p>
+
+<h3>Vue.js</h3>
+<p>Vue.js is a feature rich framework used for building user interfaces and is also suprisingly lightweight and easy to understand. Being based in Javascript allows Vue to integrate easily into existing applications while maintaining flexibility that allows you to write templates in HTML, Javascript, or even JSX. Vue gives you the freedom to write your application in the way that suits your needs, with a robust companion library that is officially supported and kept up-to-date with the core Vue library. This means you will have no shortage of resources to make your app look and feel exactly how you want it to.</p>
+    
+<h3>Node.js</h3>
+<p>Node.js is a highly versatile, run-time environmeent tool that can allow you to build platform-independant web apps. It’s a light, scalable, and cross-platform way to execute code, and uses an event-driven I/O model which makes it extremely efficient and makes scalable network applications possible. Uses of Node.js are not limited to web applications but also include microcontrollers, REST APIs, static file servers, OS wrappers, robots, and even drone programming.</p>
+<p style="margin-bottom: 8px;">The most important advantages of Node include:</p>
+<p class="l-indent" style="margin: 0;">1. It makes building real-time apps (eg. chat or gaming) lightning fast.</p>
+<p class="l-indent" style="margin: 0;">2. It makes coding in JavaScript for both the client and server side possible.</p>
+<p class="l-indent" style="margin: 0;">4. NPM (Node Package Manager) gives developers multiple tools and modules to use, thus further boosting their productivity.</p>
+<p class="l-indent" style="margin-top: 0;">5. Code executes faster than in any other language.</p>
+    
+<h2 class="m-t-2">Spinning up a MEVN stack on GCP (Google Cloud platform)</h2>
     
 <p class="m-t-1">1. Navigate to <a href="https://console.cloud.google.com/">Google Cloud Platform</a> and create a new project.</p>  
 <img src="images/1.png" alt="Create a new project on GCP">
@@ -48,37 +75,43 @@
 <p class="l-indent">f. Click on the Create button.</p>
     
 <p class="m-t-2">4. The new VM instance should automatically start. If it doesn’t, click on the play button.</p>
-<p class="m-t-1">5. Click on ssh. This will open up a terminal window.</p>
-<img src="images/6.png" alt="Click on ssh">
+
+<p class="m-t-1">5. We need to allow the ports 5000 and 8080 to be open. We do this by adding the port numbers to the “default-allow-http” firewall rule.</p>
+<p class="l-indent">a. Click on the hamburger and click on VPC network</p>
+<p class="l-indent">b. Click on Firewall rules
+<img style="width: 400px;" class="m-t-0" src="images/30.png" alt="Firewall rules"></p>    
+<p class="l-indent">c. Click on default-allow-http and edit</p>
+<p class="l-indent">d. Scroll down to Protocols and ports and under Specified protocols and ports enter 5000 and 8080 separated by commas in the tcp field.
+<img style="width: 600px;" class="m-t-0" src="images/31.png" alt="Protocols"></p>   
+<p class="l-indent">e. Click on save </p>
     
-<p class="m-t-2">6. First we need to install  Node Version Manager (NVM). </p>
+<h4 class="m-t-2">Add Package Manager</h4> 
+<p class="m-t-1">6. Click on ssh. This will open up a terminal window.</p>  
+<img style="width: 700px;" src="images/6.png" alt="Click on ssh">
+<p>First we need to install Node Version Manager (NVM). </p>
 <span class="console">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash</span>
+    
+<h4 class="m-t-2">Adding Node.js</h4> 
     
 <p class="m-t-1">7. Installing the latest version of Node.js run the following:</p>
 <span class="console">nvm install stable</span>
 <p>If you get nvm command not found, you will need to close your terminal and relaunch it. Once your server has restarted, use the command <strong>nvm install stable</strong> to install the latest version of Node.js. </p>
 <p class="m-t-1">To verify that NVM has been installed run the following:</p>
-<span class="console">nvm  --version</span>
+<span class="console">nvm  --version</span> 
 
-    
-<h4 class="m-t-2">Adding Node.js</h4> 
 <p class="m-t-1">8. Install Node by running the following command: </p>
 <span class="console">nvm install node</span>
     
 <h4 class="m-t-2">Install Vue.js</h4> 
-<p class="m-t-1">1. Now create a folder for the project. Run the following command: </p>
-<span class="console">mkdir posts</span>
-<span class="console">cd posts</span>
     
-<p class="m-t-1">2. Install Vue Cli. Interactive project scaffolding built on Webpack. Run the following code:</p>
+<p class="m-t-1">1. Install Vue Cli. Interactive project scaffolding built on Webpack. Run the following code:</p>
 <span class="console">npm install -g @vue/cli</span>
     
-<p class="m-t-1">3. Initialize the npm by running the following code:</p>
+<p class="m-t-1">2. Initialize the npm by running the following code:</p>
 <span class="console">npm init</span>
     
-<p class="m-t-1">4. Complete the following prompts on the command line/terminal:</p>
-<p class="l-indent">a. Package Name: (enter a name) here we used posts. Which was defaulted to the package name field from the directory we made in step 1. 
-Press enter.
+<p class="m-t-1">3. Complete the following prompts on the command line/terminal:</p>
+<p class="l-indent">a. Package Name: (enter a name) here we used client. Which was defaulted to the package name field from the directory we made in step 1. (The images in this section use “posts” instead of client, but the process is the same.)  Press enter.
 <img style="width: 700px;" class="m-t-0" src="images/20.png" alt="Install Vue"></p>
 <p class="l-indent">b. Version: (version number will appear here in parenthesis) Leave the defaulted and press enter. </p>
 <p class="l-indent">c. Description: (for example, test), press enter and then you will see this: entry point: (index.js). Press enter.
@@ -92,22 +125,108 @@ Press enter.
 <img style="width: 350px;" class="m-t-0" src="images/24.png" alt="Install Vue"></p> 
 <p class="l-indent">h. License: (Enter the license you’d like to use. We used MIT here) Press enter.
 <img style="width: 350px;" class="m-t-0" src="images/25.png" alt="Install Vue"></p>
-<p class="l-indent">i. This is what you will see next. Press enter.
+<p class="l-indent">i. This is what you will see next. Type 'y' and press enter.
 <img style="width: 700px;" class="m-t-0" src="images/26.png" alt="Install Vue"></p>
-<p class="m-t-1">5. To intall the package and save it as a dependency in the package.json file, run the following code:</p>
+<p class="m-t-1">4. To intall the package and save it as a dependency in the package.json file, run the following code:</p>
 <span class="console">npm install</span>
-<p class="m-t-1">6. Next, we need to create a project to do so use the following command: (You may name your project what you’d like, but for this tutorial we named it client.)</p>
+<p class="m-t-1">5. Next, we need to create a project to do so use the following command: (You may name your project what you’d like, but for this tutorial we named it client.)</p>
 <span class="console">vue create client</span>
 <p>Next you will see the following:</p>
 <img style="width: 400px;" class="m-t-0" src="images/27.png" alt="Install Vue">
 <p>Press enter. When it is complete, you will see the following: </p>
 <img style="width: 700px;" class="m-t-0" src="images/28.png" alt="Install Vue">
 <p>Your project is now created.</p>
-<p class="m-t-1">7. In the command line type the next two commands:</p>
+<p class="m-t-1">6. In the command line type the next two commands:</p>
 <span class="console">cd client</span>
 <span class="console">npm run serve</span>
 <p>You will see this screen when it is complete:</p>
 <img style="width: 400px;" class="m-t-0" src="images/29.png" alt="Install Vue">
+<!--
+<p class="m-t-1">7. A message will be displayed: <em>Your application is running here: http://localhost:8080</em>. Since this is running on Google Cloud Platform a firewall rule will need to be created.</p>
+<p>Select the hamburger menu in the upper left and click on VPC network and select firewall rule.</p>
+<p class="l-indent">a. Click on the button Create New Firewall Rule</p>
+<p class="l-indent">b. Enter a name for the firewall rule. fwr8080 wood be good</p>
+<p class="l-indent">c. In the Source IP ranges field enter 0.0.0.0</p>
+<p class="l-indent">d. In the Protocols and ports select the tcp field and enter 8080</p>
+<p class="l-indent">e. Click on the Create button</p>
+<p class="l-indent">f. Click on the hamburger menu and select Compute Engine</p>
+<p class="l-indent">g. The firewall rule now needs to be applied to the VM instance</p>
+<p class="l-indent-2">I. You will need to stop the VM instance first</p>
+<p class="l-indent-2">II. Click on the name of this instance and click on the edit button</p>
+<p class="l-indent-2">III. Scroll down to Network tags and enter the firewall name</p>
+<p class="l-indent-2">IV. Click on the Save button at the bottom</p>
+<p class="l-indent-2">V. Select the VM instance and click on the play button to spin it back up</p>
+<p class="l-indent">h. Click on the ssh button</p>
+<p class="l-indent">i. Now we need to edit the path. Run the following: <span class="console m-t-0">cd posts/client/config/</span></p>
+<p class="l-indent">j. The index.js file needs to be updated. Run the following code: <span class="console m-t-0">nano index.js</span></p>
+<p class="l-indent">k. Use the arrow keys and move the cursor down to 
+    <span class="console m-t-0">// Various Dev Server settings <br> host: 'localhost', // can be overwritten by process.env.HOST</span>
+The host needs to be changed to 0.0.0.0. Update the host and close and save. Control + c to save y for yes then press enter.</p>
+-->
+<p class="m-t-1">7. Restart the VM instance.</p>
+<p class="m-t-1">8. Click on ssh.</p>
+<!--
+<p class="m-t-1">9. Run the following to start the web dev server: 
+    <span class="console m-t-0">cd posts/client/</span>
+    <span class="console m-t-0">npm run dev</span></p>
+-->
+<p class="m-t-1">9. Now that we have the frontend time to build out the backend with Express.
+Run the following in the root directory(client):
+    <span class="console m-t-0">mkdir server</span>
+    <span class="console m-t-0">cd server</span></p>
+<p class="m-t-1">10. Initialize this server project with npm and this will create a package.json inside the server directory. Run the following: <span class="console m-t-0">npm init -f </span></p>
+<p class="m-t-1">11. The package.json file is missing the start command so we will need to add this.
+Run the following: <span class="console m-t-0">nano package.json </span></p>
+<p class="m-t-1">12. With the arrow keys move down to the scripts section and add the following above test <span class="console m-t-0">"start": "node src/app.js", </span> Close and save.</p>
+<!--
+<p class="m-t-1">13. Create a src folder inside the server directory and a app.js file.
+Run the following:
+    <span class="console m-t-0">mkdir src</span>
+    <span class="console m-t-0">touch app.js</span></p>
+-->
+    
+
+<h4 class="m-t-2">Adding Express</h4> 
+<p class="m-t-1">13. Install Express inside the server directory. Run the following:
+    <span class="console m-t-0">npm install express --save</span></p>
+<p class="m-t-1">14. We will also need some of the other dependencies for making HTTP requests. So let’s go ahead and install bodyParser, morgan and cors. Run the following:
+    <span class="console m-t-0">npm install --save body-parser cors morgan</span></p>
+    
+<!--<p class="m-t-1">15. Update the app.js in the src directory with the following:</p>
+<div style="font-family: Courier; padding-left: 32px;" >
+    <p>const express = require('express') <br> 
+    const bodyParser = require('body-parser') <br>
+    const cors = require('cors') <br> <br>
+    const morgan = require('morgan') <br> <br>
+    const app = express() <br>
+    app.use(morgan('combined')) <br>
+    app.use(bodyParser.json()) <br>
+    app.use(cors()) </p>
+
+    <p style="margin: 0;"> app.get('/posts', (req, res) => { </p>
+    <p class="l-indent" style="margin: 0;">res.send( <br> </p>
+    <p class="l-indent-2" style="margin: 0;">[{ title: "Hello World!",
+        description: "Hi there! How are you?" }] </p>
+    <p class="l-indent" style="margin: 0;">  ) </p>
+    <p style="margin: 0;">    })</p>
+
+    <p>app.listen(process.env.PORT || 8081) </p>
+
+ </div>   
+-->
+    
+<!--
+<p class="m-t-1">15. So, we don’t need to restart the server every time need to run the following:
+    <span class="console m-t-0">npm install --save nodemon</span></p>
+    
+<p class="m-t-1">16. Update the scripts. </p>
+<div style="font-family: Courier; padding-left: 32px;" >
+<p style="margin: 0;">"scripts": { <br>
+<p class="l-indent-2" style="margin: 0;">"start": "./node_modules/nodemon/bin/nodemon.js src/app.js",</p>
+<p class="l-indent-2" style="margin: 0;">"test": "echo \"Error: no test specified\" && exit 1"</p>
+}
+    </div>
+-->
     
 <h4 class="m-t-2">Create a Mongo.DB account</h4>
 <p class="m-t-1">1. Navigate to <a href="https://cloud.mongodb.com/user#/atlas/login">MongoDB Cloud Platform</a> and create a new account.
@@ -180,18 +299,11 @@ Press enter.
     
     
     
-    
-    
-    
-    
-    
-    
-    
 <footer>
     <ul>
     <li>Copyright 2019 &copy;</li>
     <li>All Rights Reserved</li>
-    <li><a href="">Contact Us</a></li>
+    <li><a href="reference.html">Reference</a></li>
     </ul>
 </footer>   
     
