@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset="UTF-8">
+ 
+<link href="styles.css" rel="stylesheet" type="text/css">
+
+<title>MEVN Stack</title>
+</head>
+    
+<body>
+    
+<header>
+<div id="container">
+<img style="width: 120px; display: inline; float: left; margin: 10px;" src="images/mevn.png" alt="MEVN Logo">
+<h1 class="logo"><a style="margin-left: 10px;" href="index.html">
+    Build full stack web apps with MEVN Stack</a></h1>    
+</div>
+    
+<nav id="primary">
+    <ul>
+    <li><a href="index.html">MEVN Tutorial</a></li>
+    <li><a href="webapp.html">Web App Tutorial</a></li>
+    <li><a href="https://github.com/davidnguyen234/application-stack">GitHub Repo</a></li>
+    <li><a href="contactus.html">Contact Us</a></li>
+    </ul>
+</nav>
+</header>    
+    
+<div id="wrapper">
+    
+<h2 class="m-t-2">Building a Vue.js To-Do list web app on a MEVN stack</h2>
+    
+<p class="m-t-1">1. Follow the steps 1-5 from the MEVN tutorial to create a new project on GCP.</p>  
+<p class="m-t-1">2. Click on the hamburger and click on Compute Engine and select ssh for the VM instance that was created.</p>
+<p class="m-t-1">3. Click on ssh. This will open up a terminal window.</p>
+    
+<h4 class="m-t-2">Add Package Manager</h4>
+<p>4. We need to install Node Version Manager (NVM). </p>
+<span class="console">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash</span>
+<p>*Close your terminal and relaunch it before moving on to the next step</p>    
+   
+    
+<h4 class="m-t-2">Adding Node.js</h4> 
+<p class="m-t-1">5. Installing the latest version of Node.js run the following:</p>
+<span class="console">nvm install stable</span>
+<p class="m-t-1">To verify that NVM has been installed run the following:</p>
+<span class="console">nvm  --version</span> 
+    
+<h4 class="m-t-2">Install Git</h4>
+<p class="m-t-1">6. Next we installed git: Run the following</p>
+<span class="console">sudo apt install git</span> 
+<p class="m-t-1">7. You will be asked if you want to continue. Enter 'y' and press enter.</p>
+<p class="m-t-1">8. Next we associated our git user.name with this installation: </p>
+<span class="console">git config --global user.name "FirstName LastName"</span>
+<p class="m-t-1">9. Next we associated our git user.email with this installation: </p>
+<span class="console">git config --global user.email "youremail@email.com"</span>
+    
+<h4 class="m-t-2">Clone repo</h4>
+<p class="m-t-1">10. Run the following:</p>
+<span class="console">sudo git clone https://github.com/generocha/mevn-todo.git</span>
+    
+<h4 class="m-t-2">Start the Vue CLI</h4>    
+<p class="m-t-1">11. Run the following:</p>   <span class="console">cd ../</span>
+<span class="console">npm run serve</span>
+<p class="m-t-1">12. Open a second ssh window </p>
+<p class="m-t-1">13. Run the following:</p>   <span class="console">cd mevn-todo/server</span>
+<span class="console">npm run dev</span>
+<p class="m-t-1">14. Open app in the browser. <em>http://<'External IP'>:8080</em></p> 
+    
+    
+    
+<footer>
+    <ul>
+    <li>Copyright 2019 &copy;</li>
+    <li>All Rights Reserved</li>
+    <li><a href="reference.html">Reference</a></li>
+    </ul>
+</footer>   
+    
+</div>
+    
+ 
+    
+</body>
+</html>
